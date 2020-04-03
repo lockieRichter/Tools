@@ -1,0 +1,2 @@
+alias coverlet=/Users/lockierichter/.dotnet/tools/coverlet
+alias gclean='git reset HEAD; git clean -f'

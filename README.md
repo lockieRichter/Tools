@@ -86,3 +86,22 @@ git branch -m old_branch new_branch #This step will only do local if you so choo
 git push origin :old_branch
 git push --set-upstream origin new_branch
 ```
+
+## Aliases
+
+I like to use the `.aliases` file to store my useful aliases. 
+Set the aliases in the following ways.
+
+.bashrc:
+
+```
+if [ -f ~/.aliases ]; then
+    . ~/.aliases
+fi
+```
+
+.zshrc:
+
+```
+source $HOME/.aliases
+```
