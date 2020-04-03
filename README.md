@@ -1,7 +1,9 @@
 # Tools
+
 Helpful tools for development.
 
 ## Force git prompt to be coloured
+
 To get a coloured git prompt in your terminal add the following to your `.bashrc`.
 
 ```bash
@@ -15,6 +17,7 @@ fi
 ```
 
 ## Redirect output for testing java
+
 Here is some code I use to redirect the standard output for testing in Java.
 
 ```java
@@ -22,30 +25,30 @@ import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
 public class Driver {
-	public static void main(String[] args) {
-	
-	ByteArrayOutputStream baos = new ByteArrayOutputStream();
-	PrintStream output = new PrintStream(baos);
+    public static void main(String[] args) {
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+    PrintStream output = new PrintStream(baos);
 
-	// Store the old output for later
-	PrintStream stdOut = System.out;
-	
-	// Set the new output
-	System.setOut(output);
-	
-	// Do stuff with output
-	System.out.println("Hello world!");
-	
-	// Print output as string
-	System.err.println(baos.toString());
+    // Store the old output for later
+    PrintStream stdOut = System.out;
 
-	// Restore standard output
-	System.setOut(stdOut);
-	}
+    // Set the new output
+    System.setOut(output);
+
+    // Do stuff with output
+    System.out.println("Hello world!");
+
+    // Print output as string
+    System.err.println(baos.toString());
+
+    // Restore standard output
+    System.setOut(stdOut);
+    }
 }
 ```
 
 ## Estimation
+
 Here is a nice method for estimating the time required to do a task or something similar.
 
 When estimating a task provide three estimates.
@@ -71,6 +74,7 @@ The amount of uncertainty of the task is U = (P - O) / 6. The higher this number
 ```bash
 grep -rl <word to be replaced> | xargs sed -i 's/<word to be replaced>/<new word to replace>/g'
 ```
+
 for example
 
 ```bash
@@ -89,12 +93,12 @@ git push --set-upstream origin new_branch
 
 ## Aliases
 
-I like to use the `.aliases` file to store my useful aliases. 
+I like to use the `.aliases` file to store my useful aliases.
 Set the aliases in the following ways.
 
 .bashrc:
 
-```
+```bash
 if [ -f ~/.aliases ]; then
     . ~/.aliases
 fi
@@ -102,6 +106,6 @@ fi
 
 .zshrc:
 
-```
+```zsh
 source $HOME/.aliases
 ```
