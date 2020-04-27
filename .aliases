@@ -1,2 +1,5 @@
 alias coverlet=/Users/lockierichter/.dotnet/tools/coverlet
 alias gclean='git reset --hard HEAD; git clean -f'
+
+alias gcd='git checkout develop'
+alias gcm='git checkout master'
